@@ -10,7 +10,9 @@ class CosplayController extends Controller
 
 {
     public function index() {
-    $cosplays = Cosplay::all();
-    return view('index', compact('cosplays'));
+        $cosplays = \App\Models\Cosplay::all(); 
+        return view('cosplay.index', compact('cosplays'));
     }
+
+    
 }

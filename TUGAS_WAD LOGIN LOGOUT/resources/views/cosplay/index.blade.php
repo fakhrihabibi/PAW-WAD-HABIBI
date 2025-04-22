@@ -25,9 +25,21 @@
             padding: 10px;
             text-align: left;
         }
+        .logout {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
     </style>
 </head>
 <body>
+    <div class="logout">
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+
     <h1>Daftar Kostum Cosplay</h1>
     <table border="1" cellpadding="10">
         <thead>
